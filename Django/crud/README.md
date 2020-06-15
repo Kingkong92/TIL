@@ -48,12 +48,14 @@ python manage.py startapp articles
 
 10. Data Base 생성
     - models.py
+    ```
     class Articles(models.Model):
     title = models.CharField(max_length=10)
     content = models.TextField()
     created_at = models.DateTimeField(auto_now_add = True)
     updated_at = models.DateTimeField(auto_now=True)
-
+    ```
+    
 11. Data Base 설계도 / 적용
     - 서버 종료 Ctrl + C 이후  python manage.py makemigrations 
     - python manage.py migrate
